@@ -13,18 +13,18 @@ const MeetingRooms = () => (
 
 			return (
 				<div className='row meetingrooms'>
-					<div className='title'>Select one of the free rooms</div>
+					<div className='title'>Please Select one of the free rooms</div>
 					{data.MeetingRooms.map(
 						room => {
-							console.log(room);
+							console.log('room----', room);
 							return (
-								<div className='block'>
+								<div className='block' key={room.name}>
 									<div className='name'>{room.name}</div>
 									<div className='building'>{`${room.building.name}`}</div>
 									<div className='floor'>{`floor: ${room.floor}`}</div>
 									Meetings :
 									{room.meetings.map(meeting => {
-										return <div>{meeting.title}</div>;
+										return <div key={meeting.title}>{meeting.title}</div>;
 									})}
 								</div>
 							);

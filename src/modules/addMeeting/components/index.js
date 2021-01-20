@@ -29,7 +29,7 @@ const AddMeeting = () => (
 						});
 					}}
 				>
-					AddMeeting
+					Add Meeting
 				</div>
 			);
 		}}

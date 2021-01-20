@@ -10,19 +10,19 @@ const Listing = () => (
 			if (error) return <p>oops, it went wrong...</p>;
 
 			return (
-				<div className='row'>
+				<div name="buildings">
 					{data.Buildings.map(
 						building => {
 							console.log(building);
 							return (
-								<div>
+								<div key={building.name}>
 									{building.name}
 									{building.meetingRooms.map(meetingRoom => {
 										return (
-											<div>
+											<div key={meetingRoom.name}>
 												{meetingRoom.name}
 												{meetingRoom.meetings.map(meeting => {
-													return <div>{meeting.title}</div>;
+													return <div key={meeting.title}>{meeting.title}</div>;
 												})}
 											</div>
 										);
