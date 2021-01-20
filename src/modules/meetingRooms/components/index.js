@@ -15,15 +15,15 @@ const MeetingRooms = () => (
 				<div className='row meetingrooms'>
 					<div className='title'>Select one of the free rooms</div>
 					{data.MeetingRooms.map(
-						rooms => {
-							console.log(rooms);
+						room => {
+							console.log(room);
 							return (
 								<div className='block'>
-									<div className='name'>{rooms.name}</div>
-									<div className='building'>{`${rooms.building.name}`}</div>
-									<div className='floor'>{`floor: ${rooms.floor}`}</div>
+									<div className='name'>{room.name}</div>
+									<div className='building'>{`${room.building.name}`}</div>
+									<div className='floor'>{`floor: ${room.floor}`}</div>
 									Meetings :
-									{rooms.meetings.map(meeting => {
+									{room.meetings.map(meeting => {
 										return <div>{meeting.title}</div>;
 									})}
 								</div>

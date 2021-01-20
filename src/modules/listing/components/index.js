@@ -12,12 +12,12 @@ const Listing = () => (
 			return (
 				<div className='row'>
 					{data.Buildings.map(
-						book => {
-							console.log(book);
+						building => {
+							console.log(building);
 							return (
 								<div>
-									{book.name}
-									{book.meetingRooms.map(meetingRoom => {
+									{building.name}
+									{building.meetingRooms.map(meetingRoom => {
 										return (
 											<div>
 												{meetingRoom.name}
